@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.demoqa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation("io.rest-assured:rest-assured:6.0.0")
+    implementation("io.rest-assured:json-path:6.0.0")
+    implementation("io.rest-assured:xml-path:6.0.0")
+    //Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    //Jackson
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.21.0")
+    //AssertJ
+    testImplementation("org.assertj:assertj-core:4.0.0-M1")
+}
+
+test {
+    useJUnitPlatform()
+}
