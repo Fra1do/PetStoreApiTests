@@ -182,7 +182,7 @@ public class UpdatePetTest extends BaseTest {
                 .extract()
                 .as(CreatePetResponse.class);
 
-        String emptyString = null;
+        String emptyString = "";
 
         UpdatePetRequest request = UpdatePetRequest.build()
                 .setPetId(createPetResponse.getId())
